@@ -1,1 +1,55 @@
-<p>home works!</p>
+<div class=" mt-5 pt-5">
+    <div class="row">
+        <div class="col-md-4 ">
+            <div class="brdr w-25 my-3"></div>
+            <h2 class="my-4">Trending Movies <br> To Watch Right Now</h2>
+            <p class="mb-4 text-muted">Trending Movies <br> To Watch Right Now</p>
+            <div class="brdr w-75 my-3"></div>
+            
+
+        </div>
+        <div *ngFor="let movie of trendingMovies" class="col-md-2">
+            <div class="position-relative">
+                <img [src]="imgSrc+movie.poster_path" class="w-100" alt="">
+                <h3 class="h6 my-2">{{movie.title}}</h3>
+                <div class="position-absolute vote p-2 fw-bolder top-0 end-0 bg-lights">{{movie.vote_average}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md-4 ">
+            <div class="brdr w-25 my-3"></div>
+            <h2 class="my-4">Trending TV Show <br> To Watch Right Now</h2>
+            <p class="mb-4 text-muted">Trending TV Show <br> To Watch Right Now</p>
+            <div class="brdr w-75 my-3"></div>
+            
+
+        </div>
+        <div *ngFor="let tv of trendingTV" class="col-md-2">
+            <div class="position-relative">
+                <img [src]="imgSrc+tv.poster_path" class="w-100" alt="">
+                <h3 class="h6 my-2">{{tv.name}}</h3>
+                <div class="position-absolute vote p-2 fw-bolder top-0 end-0 bg-lights">{{tv.vote_average}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md-4 ">
+            <div class="brdr w-25 my-3"></div>
+            <h2 class="my-4">Trending Person <br> To Watch Right Now</h2>
+            <p class="mb-4 text-muted">Trending Person <br> To Watch Right Now</p>
+            <div class="brdr w-75 my-3"></div>
+            
+
+        </div>
+        <div *ngFor="let person of trendingPerson" class="col-md-2">
+            <div class="position-relative">
+                <img [src]="imgSrc+person.profile_path" class="w-100" alt="">
+                <h3 class="h6 my-2">{{person.name}}</h3>
+                <div class="position-absolute vote p-2 fw-bolder top-0 end-0 bg-lights">{{person.popularity}}</div>
+            </div>
+        </div>
+    </div>
+</div>
