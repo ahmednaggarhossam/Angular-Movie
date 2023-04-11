@@ -1,1 +1,9 @@
-<p>movies works!</p>
+<div class="row py-5 my-5">
+    <div *ngFor="let movie of trendingMovies" class="col-md-2">
+        <div class="position-relative">
+            <img [src]="imgSrc+movie.poster_path" class="w-100" alt="">
+            <h3 class="h6 my-2">{{movie.title}}</h3>
+            <div class="position-absolute vote p-2 fw-bolder top-0 end-0 bg-lights">{{movie.vote_average}}</div>
+        </div>
+    </div>
+</div>

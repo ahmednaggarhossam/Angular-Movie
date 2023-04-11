@@ -1,1 +1,25 @@
-<p>gallery works!</p>
+<div class="row my-3 gy-2">
+    <div *ngFor="let person of trendingPerson" class="col-md-2">
+        <div class="position-relative">
+            <img [src]="imgSrc+person.profile_path" class="w-100" alt="">
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="row my-3 gy-2">
+    <div *ngFor="let movie of trendingMovie" class="col-md-2">
+        <div class="position-relative">
+            <img [src]="imgSrc+movie.poster_path" class="w-100" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="row my-3 gy-2">
+    <div *ngFor="let tv of trendingTv" class="col-md-2">
+        <div class="position-relative">
+            <img [src]="imgSrc+tv.poster_path" class="w-100" alt="">
+        </div>
+    </div>
+</div>
